@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Ammar ul Hassan | UI/UX Designer &amp; Flutter / Android App Developer</title>
+  <meta name="description" content="Portfolio of Ammar ul Hassan - UI/UX Designer and Flutter & Android App Developer from Attock, Pakistan. Designing seamless interfaces and engineering performant mobile applications." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#0a0e1a",
+            "surface-dim": "#0a0e1a",
+            "surface-bright": "#2a3147",
+            "surface-container-lowest": "#060913",
+            "surface-container-low": "#111728",
+            "surface-container": "#171f34",
+            "surface-container-high": "#202a45",
+            "surface-container-highest": "#2a375a",
+            "on-surface": "#e2e7f7",
+            "on-surface-variant": "#9ba6c4",
+            "outline": "#4a5578",
+            "outline-variant": "#2a3452",
+            "primary": "#3b82f6",
+            "primary-container": "#2563eb",
+            "primary-light": "#93c5fd",
+            "cyan-accent": "#06b6d4",
+            "secondary": "#a855f7",
+            "secondary-container": "#7e22ce",
+            "secondary-light": "#d8b4fe",
+            "tertiary": "#f97316",
+            "tertiary-container": "#ea580c"
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "body": ["Manrope", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #0a0e1a;
+      color: #e2e7f7;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    code, pre, .font-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Grid background pattern */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    /* Code tab transitions */
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #060913;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #202a45;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3b82f6;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-white min-h-screen flex flex-col bg-grid-pattern">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/85 backdrop-blur-md border-b border-outline-variant/50 transition-all duration-300" id="navbar">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo (Pure Geometric Design, No photo) -->
+      <a href="#home" class="flex items-center gap-3 focus:outline-none group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary via-cyan-accent to-secondary p-[1px] shadow-[0_0_18px_rgba(59,130,246,0.35)] group-hover:shadow-[0_0_24px_rgba(59,130,246,0.6)] transition-all">
+          <div class="w-full h-full bg-surface-container-lowest rounded-[11px] flex items-center justify-center font-display font-bold text-white text-base">
+            AH
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg tracking-tight text-white group-hover:text-primary transition-colors flex items-center gap-1.5">
+            AMMAR <span class="h-2 w-2 rounded-full bg-cyan-accent shadow-[0_0_8px_#06b6d4]"></span>
+          </span>
+          <span class="font-mono text-[10px] text-on-surface-variant tracking-wider uppercase">UI/UX &middot; Flutter &middot; Android</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 p-1.5 rounded-xl bg-surface-container-low/90 border border-outline-variant/60 backdrop-blur-md">
+        <a href="#home" class="nav-link px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-primary bg-surface-container-high/90 shadow-inner">Home</a>
+        <a href="#about" class="nav-link px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-on-surface-variant hover:text-white hover:bg-surface-container-high/50">About</a>
+        <a href="#skills" class="nav-link px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-on-surface-variant hover:text-white hover:bg-surface-container-high/50">Skills</a>
+        <a href="#projects" class="nav-link px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-on-surface-variant hover:text-white hover:bg-surface-container-high/50">Projects</a>
+        <a href="#experience" class="nav-link px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-on-surface-variant hover:text-white hover:bg-surface-container-high/50">Experience</a>
+        <a href="#contact" class="nav-link px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-on-surface-variant hover:text-white hover:bg-surface-container-high/50">Contact</a>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="./Ammar_Ul_Hassan_CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container border border-outline-variant/80 text-on-surface hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(59,130,246,0.25)] text-sm font-medium transition-all">
+          <span class="material-symbols-outlined text-[18px]">description</span>
+          <span>CV</span>
+        </a>
+        <a href="#contact" class="inline-flex items-center gap-1.5 px-5 py-2 rounded-lg bg-primary-container text-white font-semibold hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:-translate-y-0.5 text-sm transition-all">
+          <span>Let's Talk</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg bg-surface-container border border-outline-variant/60 text-white hover:text-primary focus:outline-none" aria-label="Toggle Navigation">
+        <span id="menu-icon-open" class="material-symbols-outlined text-[24px]">menu</span>
+        <span id="menu-icon-close" class="material-symbols-outlined text-[24px] hidden">close</span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest/95 border-b border-outline-variant/60 px-6 py-5 backdrop-blur-xl">
+      <div class="flex flex-col gap-3">
+        <a href="#home" class="mobile-nav-link text-primary font-semibold py-2 border-b border-white/5">Home</a>
+        <a href="#about" class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 border-b border-white/5">About</a>
+        <a href="#skills" class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 border-b border-white/5">Skills</a>
+        <a href="#projects" class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 border-b border-white/5">Projects</a>
+        <a href="#experience" class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 border-b border-white/5">Experience</a>
+        <a href="#contact" class="mobile-nav-link text-on-surface-variant hover:text-primary py-2 border-b border-white/5">Contact</a>
+        <div class="flex items-center gap-3 pt-3">
+          <a href="./new-cv-ammar.pdf" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 rounded-lg bg-surface-container border border-outline-variant/70 text-on-surface text-sm font-medium">Review CV</a>
+          <a href="#contact" class="flex-1 text-center py-2.5 rounded-lg bg-primary-container text-white font-semibold text-sm">Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface flex-1">
+    <div class="flex flex-col w-full relative overflow-hidden bg-surface text-on-surface">
+
+      <!-- Ambient Background Lighting Glows -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-primary/15 via-cyan-accent/10 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+      <div class="absolute top-[40%] right-[-100px] w-[600px] h-[600px] bg-secondary/10 blur-[150px] pointer-events-none -z-10"></div>
+      <div class="absolute bottom-[20%] left-[-100px] w-[550px] h-[550px] bg-primary/10 blur-[160px] pointer-events-none -z-10"></div>
+
+      <!-- ========================================================================= -->
+      <!-- 1. HERO SECTION -->
+      <!-- ========================================================================= -->
+      <section class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-10 lg:pt-16 pb-16 lg:pb-24" id="home">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Left Column: Copy & Identity -->
+          <div class="lg:col-span-7 flex flex-col items-start gap-5">
+            
+            <!-- Discipline Pill Badge with Location: Attock, Pakistan -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container border border-outline-variant/70 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse"></span>
+              <span class="font-mono text-xs text-on-surface-variant font-medium">
+                Attock, Pakistan &middot; <span class="text-primary font-semibold">Available for Hire</span>
+              </span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
+              UI/UX Designer &amp; <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-accent to-secondary-light">
+                Flutter &amp; Android Developer
+              </span>
+            </h1>
+
+            <!-- Supporting Text -->
+            <p class="font-body text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
+              I’m <strong class="text-white font-semibold">Ammar ul Hassan</strong>, a Software Engineer from Attock. I bridge the intersection of user-centered Figma design systems and production-ready mobile architectures across Flutter, Android, and Dart.
+            </p>
+
+            <!-- Role Skill Badges -->
+            <div class="flex flex-wrap items-center gap-2 pt-1">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/50 text-white font-mono text-xs">
+                <span class="material-symbols-outlined text-[16px] text-cyan-accent">draw</span>
+                <span>Figma UI/UX</span>
+              </div>
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/50 text-white font-mono text-xs">
+                <span class="material-symbols-outlined text-[16px] text-primary">flutter</span>
+                <span>Flutter &amp; Dart</span>
+              </div>
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/50 text-white font-mono text-xs">
+                <span class="material-symbols-outlined text-[16px] text-secondary-light">android</span>
+                <span>Native Android</span>
+              </div>
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/50 text-white font-mono text-xs">
+                <span class="material-symbols-outlined text-[16px] text-tertiary">api</span>
+                <span>REST APIs &amp; State</span>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-wrap items-center gap-4 pt-3">
+              <a href="#projects" class="inline-flex items-center justify-center px-7 py-3.5 rounded-lg bg-primary-container text-white font-semibold tracking-wide hover:shadow-[0_0_24px_rgba(59,130,246,0.45)] hover:-translate-y-0.5 transition-all">
+                <span>Explore Projects</span>
+                <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
+              </a>
+              <a href="./new-cv-ammar.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-surface-container-high border border-outline-variant/70 text-white font-medium hover:bg-surface-container-highest hover:border-primary/50 transition-all">
+                <span class="material-symbols-outlined mr-2 text-[18px]">download</span>
+                <span>Review CV</span>
+              </a>
+              <a href="#contact" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-transparent border border-outline-variant/50 text-on-surface-variant hover:text-white hover:border-white/40 transition-all">
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="grid grid-cols-3 bg-surface-container-low rounded-xl divide-x divide-outline-variant/40 border border-outline-variant/40 mt-4 w-full sm:w-auto shadow-lg">
+              <div class="px-5 py-3 text-center sm:text-left">
+                <p class="text-primary text-xl font-bold font-display">1+ Year</p>
+                <p class="text-on-surface-variant text-xs mt-0.5">Industry Exp.</p>
+              </div>
+              <div class="px-5 py-3 text-center sm:text-left">
+                <p class="text-cyan-accent text-xl font-bold font-display">15+</p>
+                <p class="text-on-surface-variant text-xs mt-0.5">Projects Done</p>
+              </div>
+              <div class="px-5 py-3 text-center sm:text-left">
+                <p class="text-secondary-light text-xl font-bold font-display">Attock</p>
+                <p class="text-on-surface-variant text-xs mt-0.5">Location &middot; PK</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Developer & Designer Terminal / Workspace (NO PHOTO) -->
+          <div class="lg:col-span-5 relative flex justify-center items-center mt-6 lg:mt-0">
+            <!-- Backdrop Glow -->
+            <div class="absolute -inset-4 bg-gradient-to-tr from-primary/20 via-cyan-accent/15 to-secondary/20 rounded-3xl blur-2xl"></div>
+            
+            <!-- Sleek Glassmorphic Terminal Window -->
+            <div class="relative w-full max-w-lg flex flex-col rounded-2xl bg-surface-container-low border border-outline-variant/60 shadow-2xl backdrop-blur-xl overflow-hidden">
+              
+              <!-- Window Top Bar -->
+              <div class="flex items-center justify-between px-4 py-3 bg-surface-container-lowest border-b border-outline-variant/40">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[15px] text-cyan-accent">terminal</span>
+                  <span class="font-mono text-xs text-on-surface-variant font-medium">ammar_workspace.dart</span>
+                </div>
+                <span class="font-mono text-[11px] text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-2 py-0.5 rounded">
+                  v3.19 Ready
+                </span>
+              </div>
+
+              <!-- Interactive Tabs (Flutter / Android / Design Tokens) -->
+              <div class="flex items-center bg-surface-container px-3 pt-2 gap-1 border-b border-outline-variant/40 font-mono text-xs">
+                <button class="code-tab-btn px-3 py-1.5 rounded-t-lg bg-surface-container-low text-cyan-accent border-t border-l border-r border-outline-variant/50 font-semibold flex items-center gap-1.5" data-tab="tab-flutter">
+                  <span class="material-symbols-outlined text-[15px]">flutter</span> Flutter / Dart
+                </button>
+                <button class="code-tab-btn px-3 py-1.5 rounded-t-lg text-on-surface-variant hover:text-white flex items-center gap-1.5 transition-colors" data-tab="tab-android">
+                  <span class="material-symbols-outlined text-[15px]">android</span> Android Studio
+                </button>
+                <button class="code-tab-btn px-3 py-1.5 rounded-t-lg text-on-surface-variant hover:text-white flex items-center gap-1.5 transition-colors" data-tab="tab-figma">
+                  <span class="material-symbols-outlined text-[15px]">token</span> Design Tokens
+                </button>
+              </div>
+
+              <!-- Tab Contents -->
+              <div class="p-4 bg-surface-container-lowest font-mono text-xs leading-relaxed overflow-x-auto min-h-[220px]">
+                
+                <!-- Flutter Tab -->
+                <div id="tab-flutter" class="tab-content active text-on-surface-variant">
+                  <p><span class="text-secondary-light font-semibold">import</span> <span class="text-cyan-accent">'package:flutter/material.dart'</span>;</p>
+                  <p class="pt-1"><span class="text-primary font-semibold">class</span> <span class="text-white font-bold">AmmarPortfolioApp</span> <span class="text-secondary-light">extends</span> <span class="text-cyan-accent">StatelessWidget</span> {</p>
+                  <p class="pl-4 text-outline"><span class="text-outline">// UI/UX designed in Figma, built for 60 FPS</span></p>
+                  <p class="pl-4"><span class="text-secondary-light">@override</span></p>
+                  <p class="pl-4"><span class="text-primary font-semibold">Widget</span> <span class="text-white">build</span>(<span class="text-cyan-accent">BuildContext</span> context) {</p>
+                  <p class="pl-8"><span class="text-secondary-light font-semibold">return</span> <span class="text-cyan-accent">ModernScaffold</span>(</p>
+                  <p class="pl-12 text-white">theme: <span class="text-tertiary">AppTheme.darkArchitectural</span>,</p>
+                  <p class="pl-12 text-white">crossPlatform: <span class="text-emerald-400">true</span>,</p>
+                  <p class="pl-12 text-white">architecture: <span class="text-secondary-light">CleanMVVM</span>(),</p>
+                  <p class="pl-8">);</p>
+                  <p class="pl-4">}</p>
+                  <p>}</p>
+                </div>
+
+                <!-- Android Studio Tab -->
+                <div id="tab-android" class="tab-content text-on-surface-variant">
+                  <p><span class="text-secondary-light font-semibold">package</span> com.ammar.portfolio.ui</p>
+                  <p class="pt-1"><span class="text-secondary-light">@Composable</span></p>
+                  <p><span class="text-primary font-semibold">fun</span> <span class="text-white font-bold">NativeMobileExperience</span>() {</p>
+                  <p class="pl-4 text-outline"><span class="text-outline">// Jetpack Compose &amp; Room Persistence</span></p>
+                  <p class="pl-4"><span class="text-cyan-accent">MotionLayout</span>(motionScene = <span class="text-tertiary">SmoothTransitions</span>) {</p>
+                  <p class="pl-8"><span class="text-white">AdaptiveNavigationDrawer</span>(state = <span class="text-emerald-400">Active</span>)</p>
+                  <p class="pl-8"><span class="text-white">LocalDataRepository</span>.<span class="text-cyan-accent">observeStream</span>()</p>
+                  <p class="pl-4">}</p>
+                  <p>}</p>
+                </div>
+
+                <!-- Design Tokens Tab -->
+                <div id="tab-figma" class="tab-content text-on-surface-variant">
+                  <p class="text-outline">// Figma Design System Tokens to Code</p>
+                  <p><span class="text-cyan-accent">const</span> gridUnit = <span class="text-emerald-400">8.0</span>; <span class="text-outline">// Strict 8pt spatial system</span></p>
+                  <p><span class="text-cyan-accent">const</span> surfaceCanvas = <span class="text-tertiary">Color(0xFF0A0E1A)</span>;</p>
+                  <p><span class="text-cyan-accent">const</span> primaryAccent = <span class="text-primary">Color(0xFF3B82F6)</span>;</p>
+                  <p><span class="text-cyan-accent">const</span> typography = <span class="text-secondary-light">[Space Grotesk, Manrope, JetBrains Mono]</span>;</p>
+                  <p><span class="text-cyan-accent">const</span> autoLayoutResponsive = <span class="text-emerald-400">true</span>;</p>
+                </div>
+
+              </div>
+
+              <!-- Terminal Status Footer -->
+              <div class="px-4 py-2.5 bg-surface-container border-t border-outline-variant/40 flex items-center justify-between font-mono text-[11px] text-on-surface-variant">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-cyan-accent animate-pulse"></span>
+                  <span>Figma &amp; Flutter Codebase Synced</span>
+                </span>
+                <span class="text-white font-medium">Attock, PK</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- 2. BENTO ABOUT ME SECTION (High-Tech, NO PHOTO) -->
+      <!-- ========================================================================= -->
+      <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-24" id="about">
+        <div class="flex flex-col gap-8">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 font-mono text-xs text-primary tracking-widest uppercase font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              <span>ABOUT AMMAR</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+              The Intersection of Digital Craft &amp; Engineering
+            </h2>
+            <p class="text-on-surface-variant text-sm sm:text-base max-w-2xl">
+              Building intuitive mobile interfaces with a developer's mindset and a designer's eye for polish.
+            </p>
+          </div>
+
+          <!-- Bento Grid Layout -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            <!-- Bento Box 1: Core Philosophy & Bio (7 cols) -->
+            <div class="md:col-span-7 p-6 sm:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col justify-between gap-6 hover:border-primary/40 transition-colors">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[22px]">developer_mode</span>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-lg font-bold text-white">Engineering-Informed Design</h3>
+                    <p class="font-mono text-xs text-cyan-accent">From Wireframes to Release-Ready APKs</p>
+                  </div>
+                </div>
+                
+                <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+                  Based in <strong class="text-white">Attock, Pakistan</strong>, I work fluidly across user research, UI/UX prototyping in Figma, and cross-platform mobile development using Flutter &amp; Android Studio.
+                </p>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                  Because I actively code the interfaces I design, I understand component constraints, memory footprints, API latency, and responsive typography. This hybrid background eliminates the common friction between creative designers and engineering teams.
+                </p>
+              </div>
+
+              <!-- Two Key Architectural Pillars -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-outline-variant/30 font-mono text-xs">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-1.5 text-cyan-accent font-semibold">
+                    <span class="material-symbols-outlined text-[16px]">devices</span>
+                    <span>Responsive Systems</span>
+                  </div>
+                  <p class="text-on-surface-variant font-sans text-xs">Dynamic UI layouts optimized for tablets, foldables, and all mobile screens.</p>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-1.5 text-secondary-light font-semibold">
+                    <span class="material-symbols-outlined text-[16px]">speed</span>
+                    <span>High Performance</span>
+                  </div>
+                  <p class="text-on-surface-variant font-sans text-xs">Fast 60fps animations, efficient state management, and clean architecture.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Box 2: Location, Credentials & Availability (5 cols) -->
+            <div class="md:col-span-5 p-6 sm:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col justify-between gap-6 hover:border-cyan-accent/40 transition-colors">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
+                  <span class="font-mono text-xs text-on-surface-variant uppercase">Identity &amp; Status</span>
+                  <span class="font-mono text-xs text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20">Active</span>
+                </div>
+                
+                <!-- Quick Info Metrics -->
+                <div class="space-y-3 font-mono text-xs">
+                  <div class="flex items-center justify-between p-3 rounded-lg bg-surface-container border border-outline-variant/30">
+                    <span class="text-on-surface-variant">Location:</span>
+                    <span class="text-white font-semibold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-primary text-[15px]">location_on</span> Attock, Pakistan
+                    </span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 rounded-lg bg-surface-container border border-outline-variant/30">
+                    <span class="text-on-surface-variant">Education:</span>
+                    <span class="text-white font-semibold">BS Software Engineering</span>
+                  </div>
+                  <div class="flex items-center justify-between p-3 rounded-lg bg-surface-container border border-outline-variant/30">
+                    <span class="text-on-surface-variant">Core Focus:</span>
+                    <span class="text-cyan-accent font-semibold">Flutter &amp; Figma</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill Metres -->
+              <div class="space-y-3 pt-2">
+                <div class="space-y-1 font-mono text-xs">
+                  <div class="flex justify-between">
+                    <span class="text-white">Figma &amp; UI/UX Prototyping</span>
+                    <span class="text-cyan-accent font-bold">100%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full bg-cyan-accent rounded-full" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="space-y-1 font-mono text-xs">
+                  <div class="flex justify-between">
+                    <span class="text-white">Flutter &amp; Dart Mobile Dev</span>
+                    <span class="text-primary font-bold">90%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full bg-primary rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+
+                <div class="space-y-1 font-mono text-xs">
+                  <div class="flex justify-between">
+                    <span class="text-white">Android Studio &amp; Native Apps</span>
+                    <span class="text-secondary-light font-bold">85%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+                    <div class="h-full bg-secondary-light rounded-full" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- 3. SKILLS & EXPERTISE -->
+      <!-- ========================================================================= -->
+      <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-24" id="skills">
+        <div class="flex flex-col gap-8">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 font-mono text-xs text-secondary-light tracking-widest uppercase font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary-light"></span>
+              <span>TECHNICAL ARSENAL</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+              Skills &amp; Capabilities
+            </h2>
+            <p class="text-on-surface-variant text-sm sm:text-base max-w-2xl">
+              Specialized tools, frameworks, and methodologies across mobile design and development.
+            </p>
+          </div>
+
+          <!-- 4 Skill Category Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Group 1: UI/UX Design -->
+            <div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col gap-4 hover:border-cyan-accent/50 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-cyan-accent/10 border border-cyan-accent/20 flex items-center justify-center text-cyan-accent">
+                  <span class="material-symbols-outlined text-[22px]">draw</span>
+                </div>
+                <div>
+                  <h3 class="font-display text-base font-bold text-white">UI/UX Design</h3>
+                  <span class="font-mono text-[11px] text-on-surface-variant">Figma &amp; Systems</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Figma</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Wireframing</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Prototypes</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">User Flows</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Design Tokens</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">User Research</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Interactive Specs</span>
+              </div>
+            </div>
+
+            <!-- Group 2: Flutter & Cross-Platform -->
+            <div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col gap-4 hover:border-primary/50 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[22px]">flutter</span>
+                </div>
+                <div>
+                  <h3 class="font-display text-base font-bold text-white">Flutter &amp; Dart</h3>
+                  <span class="font-mono text-[11px] text-on-surface-variant">Cross-Platform Apps</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Flutter Framework</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Dart Language</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">State Management</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Widget Architecture</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Custom Animations</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Cross-Platform UI</span>
+              </div>
+            </div>
+
+            <!-- Group 3: Native Android Development -->
+            <div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col gap-4 hover:border-secondary-light/50 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary-light">
+                  <span class="material-symbols-outlined text-[22px]">android</span>
+                </div>
+                <div>
+                  <h3 class="font-display text-base font-bold text-white">Native Android</h3>
+                  <span class="font-mono text-[11px] text-on-surface-variant">Kotlin &amp; Java</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Android Studio</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Kotlin</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Java</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">XML UI Layouts</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">RESTful APIs</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">SQLite / Room DB</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">App Debugging</span>
+              </div>
+            </div>
+
+            <!-- Group 4: Web & Design Tools -->
+            <div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col gap-4 hover:border-tertiary/50 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-tertiary/10 border border-tertiary/20 flex items-center justify-center text-tertiary">
+                  <span class="material-symbols-outlined text-[22px]">brush</span>
+                </div>
+                <div>
+                  <h3 class="font-display text-base font-bold text-white">Tools &amp; Graphics</h3>
+                  <span class="font-mono text-[11px] text-on-surface-variant">Creative Suites</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-2 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Adobe Photoshop</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Adobe Illustrator</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Responsive Web</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">MS Office</span>
+                <span class="px-2.5 py-1 rounded-md bg-surface-container border border-outline-variant/30 text-white">Git Version Control</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- 4. FEATURED PROJECTS -->
+      <!-- ========================================================================= -->
+      <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-24" id="projects">
+        <div class="flex flex-col gap-8">
+          
+          <!-- Section Header & Filter Tabs -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="space-y-2">
+              <div class="inline-flex items-center gap-2 font-mono text-xs text-cyan-accent tracking-widest uppercase font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-accent"></span>
+                <span>PORTFOLIO WORK</span>
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+                Featured Projects
+              </h2>
+              <p class="text-on-surface-variant text-sm sm:text-base max-w-xl">
+                A curated selection of UI/UX design prototypes and mobile applications.
+              </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap items-center gap-2" id="portfolio-filters">
+              <button data-filter="all" class="filter-btn active px-4 py-2 rounded-lg text-xs font-mono font-medium bg-primary text-white transition-all shadow-[0_0_12px_rgba(59,130,246,0.3)]">All</button>
+              <button data-filter="figma" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono font-medium bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-white transition-all">Figma &amp; UI/UX</button>
+              <button data-filter="mobile" class="filter-btn px-4 py-2 rounded-lg text-xs font-mono font-medium bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-white transition-all">Flutter &amp; Android</button>
+            </div>
+          </div>
+
+          <!-- Project Showcase Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+            
+            <!-- CARD 1: VIBE -->
+            <div class="project-card group rounded-2xl bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-cyan-accent/50 transition-all duration-300 hover:-translate-y-1" data-category="figma">
+              <div class="relative w-full aspect-[16/10] bg-surface-container-lowest overflow-hidden border-b border-outline-variant/30">
+                <img src="images/3img.jpeg" alt="Vibe Social Media App UI/UX Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-cyan-accent font-mono text-[11px]">
+                  Figma Prototype
+                </span>
+              </div>
+              <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+                <div class="space-y-2">
+                  <span class="font-mono text-xs text-cyan-accent uppercase font-semibold">UI/UX Design &middot; Social Platform</span>
+                  <h3 class="font-display text-xl font-bold text-white">VIBE &mdash; Social Media App</h3>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    A modern social media experience featuring custom user profiles, a dynamic interactive feed, direct messaging, and multimedia content discovery.
+                  </p>
+                </div>
+                <div class="pt-4 flex items-center justify-between border-t border-outline-variant/30">
+                  <a href="https://www.figma.com/design/DYMHbSGhGuzALXR6ScLd9i/VIBE-SOCIAL-MEDIA-APP--Community-?node-id=87-1039&t=gXHi2zmVsPy5kzJW-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-cyan-accent hover:text-white font-semibold text-sm transition-colors">
+                    <span>Explore in Figma</span>
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant">Community Featured</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2: CAREPLUS -->
+            <div class="project-card group rounded-2xl bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-300 hover:-translate-y-1" data-category="figma">
+              <div class="relative w-full aspect-[16/10] bg-surface-container-lowest overflow-hidden border-b border-outline-variant/30">
+                <img src="images/2img.jpeg" alt="CarePlus Medical Center Healthcare App Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-primary font-mono text-[11px]">
+                  Figma Prototype
+                </span>
+              </div>
+              <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+                <div class="space-y-2">
+                  <span class="font-mono text-xs text-primary uppercase font-semibold">UI/UX Design &middot; Telehealth App</span>
+                  <h3 class="font-display text-xl font-bold text-white">CarePlus &mdash; Medical Center</h3>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    A comprehensive healthcare mobile interface focused on intuitive doctor appointments, medical records, patient profiles, and accessible UX workflows.
+                  </p>
+                </div>
+                <div class="pt-4 flex items-center justify-between border-t border-outline-variant/30">
+                  <a href="https://www.figma.com/design/DEuewgSTL5a86BenC4urIA/CarePlus-Medical-Center?node-id=0-1&t=1PLsSXEdS8mvdu1o-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary hover:text-white font-semibold text-sm transition-colors">
+                    <span>Explore in Figma</span>
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant">Design System</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3: EVENTIFY -->
+            <div class="project-card group rounded-2xl bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-secondary-light/50 transition-all duration-300 hover:-translate-y-1" data-category="figma">
+              <div class="relative w-full aspect-[16/10] bg-surface-container-lowest overflow-hidden border-b border-outline-variant/30">
+                <img src="images/1img.jpeg" alt="Eventify Event Booking App Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-secondary-light font-mono text-[11px]">
+                  Figma Prototype
+                </span>
+              </div>
+              <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+                <div class="space-y-2">
+                  <span class="font-mono text-xs text-secondary-light uppercase font-semibold">UI/UX Design &middot; Event Booking</span>
+                  <h3 class="font-display text-xl font-bold text-white">Eventify &mdash; Event Booking App</h3>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    An immersive event booking experience with real-time venue seat selection, ticket management, and an interactive step-by-step checkout funnel.
+                  </p>
+                </div>
+                <div class="pt-4 flex items-center justify-between border-t border-outline-variant/30">
+                  <a href="https://www.figma.com/design/xITiZTUrLTyZb5O4GxgVMk/Eventify?node-id=0-1&t=pKYkw7IkaUVvWU1x-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-secondary-light hover:text-white font-semibold text-sm transition-colors">
+                    <span>Explore in Figma</span>
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant">Mobile Prototype</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4: BREWBUDDY -->
+            <div class="project-card group rounded-2xl bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-tertiary/50 transition-all duration-300 hover:-translate-y-1" data-category="figma">
+              <div class="relative w-full aspect-[16/10] bg-surface-container-lowest overflow-hidden border-b border-outline-variant/30">
+                <img src="./images/4img.png" alt="BrewBuddy Coffee Shop App UI/UX Mockup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-tertiary font-mono text-[11px]">
+                  Figma Prototype
+                </span>
+              </div>
+              <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+                <div class="space-y-2">
+                  <span class="font-mono text-xs text-tertiary uppercase font-semibold">UI/UX Design &middot; Coffee Shop App</span>
+                  <h3 class="font-display text-xl font-bold text-white">BrewBuddy &mdash; Artisanal Coffee App</h3>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    A third-wave artisanal coffee mobile ecosystem with hyper-local roastery dispatch, tactile sensory customization, micro-roast subscriptions, and a clean light design system.
+                  </p>
+                </div>
+                <div class="pt-4 flex items-center justify-between border-t border-outline-variant/30">
+                  <a href="https://www.figma.com/design/6s09B2pVWvatO3pPL7lNWE/BrewBuddy?node-id=7-1304&t=ncS92zbFBNA2kvBP-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-tertiary hover:text-white font-semibold text-sm transition-colors">
+                    <span>Explore in Figma</span>
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant">Design System</span>
+                </div>
+              </div>
+            </div>
+
+                     <!-- CARD 5: MELODY MUSIC STREAMING APP -->
+            <div class="project-card group rounded-2xl bg-surface-container-low border border-outline-variant/50 overflow-hidden flex flex-col justify-between hover:border-cyan-accent/50 transition-all duration-300 hover:-translate-y-1" data-category="figma">
+              <div class="relative w-full aspect-[16/10] bg-surface-container-lowest overflow-hidden border-b border-outline-variant/30">
+                <img src="./images/5img.png" alt="Melody Music Streaming App UI/UX Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-surface-container-lowest/80 backdrop-blur-md border border-white/10 text-cyan-accent font-mono text-[11px]">
+                  Figma Prototype
+                </span>
+              </div>
+
+              <div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+                <div class="space-y-2">
+                  <span class="font-mono text-xs text-cyan-accent uppercase font-semibold">UI/UX Design &middot; Music Streaming App</span>
+                  <h3 class="font-display text-xl font-bold text-white">Melody &mdash; Music Streaming App</h3>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    A modern music streaming app featuring a vibrant neon interface, personalized music discovery, playlists, and an immersive music player experience.
+                  </p>
+                </div>
+
+                <div class="pt-4 flex items-center justify-between border-t border-outline-variant/30">
+                  <a href="https://www.figma.com/design/9SGAems8NF32cWHo0doRt4/Melody-Music-APP?node-id=0-1&t=xNKcTtmjwPd97gR0-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-cyan-accent hover:text-white font-semibold text-sm transition-colors">
+                    <span>Explore in Figma</span>
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                  </a>
+                  <span class="font-mono text-xs text-on-surface-variant">Mobile Prototype</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- 5. EXPERIENCE & EDUCATION SECTION -->
+      <!-- ========================================================================= -->
+      <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-24" id="experience">
+        <div class="flex flex-col gap-8">
+          
+          <!-- Section Header -->
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 font-mono text-xs text-tertiary tracking-widest uppercase font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              <span>PROFESSIONAL TIMELINE</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+              Experience &amp; Education
+            </h2>
+            <p class="text-on-surface-variant text-sm sm:text-base max-w-2xl">
+              Proven work track record in software engineering alongside formal credentials.
+            </p>
+          </div>
+
+          <!-- Split 2-Column Timeline Architecture -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- EXPERIENCE COLUMN -->
+            <div class="p-6 sm:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col gap-6">
+              <div class="flex items-center gap-2.5 pb-4 border-b border-outline-variant/30">
+                <span class="material-symbols-outlined text-primary text-[22px]">work</span>
+                <h3 class="font-display text-xl font-bold text-white">Work Experience</h3>
+              </div>
+              
+              <div class="relative pl-6 space-y-8 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/40">
+                
+                <!-- Oxmite Digital Ltd -->
+                <div class="relative">
+                  <span class="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-primary border-2 border-surface-container-low shadow-[0_0_8px_#3b82f6]"></span>
+                  <div class="space-y-2">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <h4 class="font-display text-base font-bold text-white">Flutter &amp; Android App Developer</h4>
+                      <span class="font-mono text-xs text-primary bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-full">30/05/2024 – Present</span>
+                    </div>
+                    <div class="font-mono text-xs text-on-surface-variant font-medium">Oxmite Digital Ltd</div>
+                    <ul class="text-on-surface-variant text-xs sm:text-sm space-y-1.5 list-disc list-inside leading-relaxed">
+                      <li>Building intuitive front-end designs for Flutter and native Android mobile apps.</li>
+                      <li>Engineering back-end functionalities, state management, and REST API integrations.</li>
+                      <li>Resolving application bugs, optimizing memory footprint, and boosting performance.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Alpha IT Studio / JH IT Zone -->
+                <div class="relative">
+                  <span class="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-cyan-accent border-2 border-surface-container-low shadow-[0_0_8px_#06b6d4]"></span>
+                  <div class="space-y-2">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <h4 class="font-display text-base font-bold text-white">UI/UX &amp; Graphic Designer</h4>
+                      <span class="font-mono text-xs text-cyan-accent bg-cyan-accent/10 border border-cyan-accent/20 px-2.5 py-0.5 rounded-full">Current</span>
+                    </div>
+                    <div class="font-mono text-xs text-on-surface-variant font-medium">JH IT Zone &middot; Alpha IT Studio</div>
+                    <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed">
+                      Crafting user-friendly mobile and web interfaces, wireframes, prototypes, and reusable Figma design systems complying with accessibility and modern usability guidelines.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- EDUCATION COLUMN -->
+            <div class="p-6 sm:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col gap-6">
+              <div class="flex items-center gap-2.5 pb-4 border-b border-outline-variant/30">
+                <span class="material-symbols-outlined text-secondary-light text-[22px]">school</span>
+                <h3 class="font-display text-xl font-bold text-white">Education &amp; Credentials</h3>
+              </div>
+              
+              <div class="relative pl-6 space-y-8 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant/40">
+                
+                <!-- University of Haripur -->
+                <div class="relative">
+                  <span class="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-secondary-light border-2 border-surface-container-low shadow-[0_0_8px_#d8b4fe]"></span>
+                  <div class="space-y-1.5">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <h4 class="font-display text-base font-bold text-white">BS Software Engineering</h4>
+                      <span class="font-mono text-xs text-secondary-light font-medium">2020 – 2024</span>
+                    </div>
+                    <div class="font-mono text-xs text-on-surface-variant font-medium">University of Haripur &middot; Haripur, Pakistan</div>
+                    <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed">
+                      Core focus on Mobile Development, Software Architecture, Human-Computer Interaction, OOP, and Database Systems.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- GCT Attock -->
+                <div class="relative">
+                  <span class="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-outline border-2 border-surface-container-low"></span>
+                  <div class="space-y-1.5">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <h4 class="font-display text-base font-bold text-white">Diploma in Computer Information Technology</h4>
+                      <span class="font-mono text-xs text-on-surface-variant font-medium">2016 – 2019</span>
+                    </div>
+                    <div class="font-mono text-xs text-on-surface-variant font-medium">Govt College of Technology &middot; Attock, Pakistan</div>
+                    <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed">
+                      Computing foundations, relational databases, data communications, and programming principles.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- F.G Public High School -->
+                <div class="relative">
+                  <span class="absolute -left-[29px] top-1.5 w-3 h-3 rounded-full bg-outline border-2 border-surface-container-low"></span>
+                  <div class="space-y-1.5">
+                    <div class="flex flex-wrap items-center justify-between gap-1">
+                      <h4 class="font-display text-base font-bold text-white">Matriculation (Science)</h4>
+                      <span class="font-mono text-xs text-on-surface-variant font-medium">2016</span>
+                    </div>
+                    <div class="font-mono text-xs text-on-surface-variant font-medium">F.G Public High School &middot; Attock, Pakistan</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Languages Subgrid -->
+          <div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/50 flex flex-col gap-4 mt-2">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[20px]">translate</span>
+              <h4 class="font-display text-base font-bold text-white">Languages</h4>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+              <div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30 flex items-center justify-between">
+                <span class="text-white font-semibold">Punjabi</span>
+                <span class="text-primary font-medium">Native Tongue</span>
+              </div>
+              <div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30 flex items-center justify-between">
+                <span class="text-white font-semibold">Urdu</span>
+                <span class="text-cyan-accent font-medium">C2 Proficient</span>
+              </div>
+              <div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30 flex items-center justify-between">
+                <span class="text-white font-semibold">English</span>
+                <span class="text-secondary-light font-medium">B2 Fluent</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- 6. CONTACT SECTION -->
+      <!-- ========================================================================= -->
+      <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-24 mb-10" id="contact">
+        <div class="p-6 sm:p-10 lg:p-12 rounded-3xl bg-surface-container-low border border-outline-variant/60 relative overflow-hidden shadow-2xl">
+          
+          <!-- Subtle glow -->
+          <div class="absolute -top-24 -right-24 w-80 h-80 bg-primary/15 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 relative z-10">
+            
+            <!-- Left: Contact Details -->
+            <div class="lg:col-span-5 flex flex-col justify-between gap-6">
+              <div class="space-y-2">
+                <div class="inline-flex items-center gap-2 font-mono text-xs text-primary tracking-widest uppercase font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  <span>GET IN TOUCH</span>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+                  Let's Build Something Meaningful Together.
+                </h2>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                  Have an application idea, design requirement, or looking to hire a dedicated UI/UX Designer &amp; Flutter Developer? Reach out today.
+                </p>
+              </div>
+
+              <!-- Contact Info Tiles -->
+              <div class="space-y-3 pt-2">
+                
+                <!-- Email -->
+                <div class="p-4 rounded-xl bg-surface-container border border-outline-variant/40 flex items-center justify-between gap-3 group">
+                  <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center text-primary flex-shrink-0">
+                      <span class="material-symbols-outlined text-[20px]">mail</span>
+                    </div>
+                    <div class="min-w-0">
+                      <div class="font-mono text-[10px] text-on-surface-variant uppercase">Email Address</div>
+                      <a class="font-display text-sm sm:text-base font-semibold text-white hover:text-primary truncate block transition-colors" href="mailto:ammarrajpoot312@gmail.com">
+                        ammarrajpoot312@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <button class="p-2 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface hover:text-primary hover:border-primary/50 transition-colors flex-shrink-0" onclick="navigator.clipboard.writeText('ammarrajpoot312@gmail.com'); showToast('Email copied to clipboard!');" title="Copy Email">
+                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                  </button>
+                </div>
+
+                <!-- Phone / WhatsApp -->
+                <div class="p-4 rounded-xl bg-surface-container border border-outline-variant/40 flex items-center justify-between gap-3 group">
+                  <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-accent/15 flex items-center justify-center text-cyan-accent flex-shrink-0">
+                      <span class="material-symbols-outlined text-[20px]">phone</span>
+                    </div>
+                    <div class="min-w-0">
+                      <div class="font-mono text-[10px] text-on-surface-variant uppercase">Phone &amp; WhatsApp</div>
+                      <a class="font-display text-sm sm:text-base font-semibold text-white hover:text-cyan-accent truncate block transition-colors" href="tel:+923168535370">
+                        (+92) 316 8535370
+                      </a>
+                    </div>
+                  </div>
+                  <a href="https://wa.me/923168535370" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface hover:text-emerald-400 hover:border-emerald-400/50 transition-colors flex-shrink-0" title="Chat on WhatsApp">
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                  </a>
+                </div>
+
+                <!-- LinkedIn -->
+                <a class="p-4 rounded-xl bg-surface-container border border-outline-variant/40 flex items-center justify-between gap-3 group hover:border-primary/50 transition-colors" href="https://linkedin.com/in/ammar-rajpoot" rel="noopener noreferrer" target="_blank">
+                  <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary-light flex-shrink-0">
+                      <span class="material-symbols-outlined text-[20px]">share</span>
+                    </div>
+                    <div class="min-w-0">
+                      <div class="font-mono text-[10px] text-on-surface-variant uppercase">LinkedIn</div>
+                      <div class="font-display text-sm sm:text-base font-semibold text-white group-hover:text-primary truncate transition-colors">
+                        linkedin.com/in/ammar-rajpoot
+                      </div>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-0.5 transition-all text-[20px] flex-shrink-0">
+                    open_in_new
+                  </span>
+                </a>
+
+                <!-- Location Badge -->
+                <div class="p-3.5 rounded-xl bg-surface-container/60 border border-outline-variant/30 flex items-center justify-between font-mono text-xs text-on-surface-variant">
+                  <span>Based in:</span>
+                  <span class="text-white font-semibold flex items-center gap-1">
+                    <span class="material-symbols-outlined text-primary text-[15px]">location_on</span> Attock, Pakistan
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Right: Interactive Inquiry Form -->
+            <div class="lg:col-span-7 rounded-2xl bg-surface-container p-6 sm:p-8 border border-outline-variant/40">
+              <form id="contact-form" class="flex flex-col gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Name Input -->
+                  <div class="space-y-1.5">
+                    <label class="font-mono text-xs text-on-surface block" for="contact-name">Your Name</label>
+                    <input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-white placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm transition-all" id="contact-name" placeholder="Alex Mercer" required type="text" />
+                  </div>
+                  <!-- Email Input -->
+                  <div class="space-y-1.5">
+                    <label class="font-mono text-xs text-on-surface block" for="contact-email">Your Email</label>
+                    <input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-white placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm transition-all" id="contact-email" placeholder="alex@domain.com" required type="email" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Phone -->
+                  <div class="space-y-1.5">
+                    <label class="font-mono text-xs text-on-surface block" for="contact-phone">Phone Number (Optional)</label>
+                    <input class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-white placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm transition-all" id="contact-phone" placeholder="+1 (555) 000-0000" type="tel" />
+                  </div>
+                  <!-- Service Scope -->
+                  <div class="space-y-1.5">
+                    <label class="font-mono text-xs text-on-surface block" for="contact-scope">Service of Interest</label>
+                    <select class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm transition-all" id="contact-scope">
+                      <option value="flutter">Flutter Cross-Platform App</option>
+                      <option value="android">Native Android App (Kotlin/Java)</option>
+                      <option value="uiux">UI/UX Design &amp; Prototype (Figma)</option>
+                      <option value="full-stack">Full Product (Design + Development)</option>
+                      <option value="other">Contract / Full-time Opportunity</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Message Area -->
+                <div class="space-y-1.5">
+                  <label class="font-mono text-xs text-on-surface block" for="contact-message">Project Scope &amp; Details</label>
+                  <textarea class="w-full px-4 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant/60 text-white placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm transition-all resize-none" id="contact-message" placeholder="Tell me about your product requirements, timeline, or open role..." required rows="4"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button class="w-full py-3.5 rounded-lg bg-primary-container text-white font-display font-semibold tracking-wide hover:shadow-[0_0_24px_rgba(59,130,246,0.45)] transition-all duration-200 flex items-center justify-center gap-2" type="submit">
+                  <span>Send Inquiry</span>
+                  <span class="material-symbols-outlined text-[18px]">send</span>
+                </button>
+                <p class="font-mono text-[11px] text-center text-on-surface-variant">
+                  Replies typically sent within 24 business hours &middot; Direct: ammarrajpoot312@gmail.com
+                </p>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex flex-col gap-8">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-outline-variant/20">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="font-display font-bold text-xl tracking-tight text-white">AMMAR UL HASSAN</span>
+            <span class="h-2 w-2 rounded-full bg-cyan-accent shadow-[0_0_8px_#06b6d4]"></span>
+          </div>
+          <p class="text-on-surface-variant font-mono text-xs">UI/UX Designer &amp; Flutter / Android App Developer &middot; Attock, Pakistan</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-sm">
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="#home">Home</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="#experience">Experience</a>
+          <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+          <a class="inline-flex items-center gap-1 text-primary hover:text-white transition-colors" href="https://linkedin.com/in/ammar-rajpoot" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[16px]">link</span>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-on-surface-variant font-mono text-xs">
+        <p>&copy; 2026 Ammar Ul Hassan. All rights reserved.</p>
+        <div class="flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Available for Full-time &amp; Contract Work</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast Notification Box -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[100] flex items-center gap-3 bg-surface-container-high border border-primary/50 text-white px-5 py-3.5 rounded-xl shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
+    <span class="material-symbols-outlined text-cyan-accent text-[22px]">check_circle</span>
+    <span id="toast-message" class="text-sm font-medium">Message sent successfully!</span>
+  </div>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Toast Notification Utility
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = msg;
+      toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3500);
+    }
+
+    // Code Tab Switching Logic
+    const tabButtons = document.querySelectorAll('.code-tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
+
+        tabButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-low', 'text-cyan-accent', 'border-t', 'border-l', 'border-r', 'border-outline-variant/50', 'font-semibold');
+          b.classList.add('text-on-surface-variant');
+        });
+
+        btn.classList.add('bg-surface-container-low', 'text-cyan-accent', 'border-t', 'border-l', 'border-r', 'border-outline-variant/50', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+
+        tabContents.forEach(content => {
+          if (content.id === targetTab) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
+      });
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    // Project Filter Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-primary', 'text-white', 'shadow-[0_0_12px_rgba(59,130,246,0.3)]');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+
+        btn.classList.add('active', 'bg-primary', 'text-white', 'shadow-[0_0_12px_rgba(59,130,246,0.3)]');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('hidden');
+            card.style.display = 'flex';
+          } else {
+            card.classList.add('hidden');
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Contact Form Submission Handling
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast("Thank you! Your message has been sent to Ammar.");
+      contactForm.reset();
+    });
+
+    // Active Navigation Highlight on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav .nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('text-primary', 'bg-surface-container-high/90', 'shadow-inner');
+        link.classList.add('text-on-surface-variant');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('text-primary', 'bg-surface-container-high/90', 'shadow-inner');
+          link.classList.remove('text-on-surface-variant');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
